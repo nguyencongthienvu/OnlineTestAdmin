@@ -1,0 +1,102 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "online-test-admin"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "../src/assets/vendor/bootstrap/css/bootstrap.min.css",
+        "../src/assets/vendor/font-awesome/css/font-awesome.min.css",
+        "../src/assets/css/fontastic.css",
+        "../src/assets/css/grasp_mobile_progress_circle-1.0.0.min.css",
+        "../src/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
+        "../src/assets/css/style.default.css",
+        "../src/assets/vendor/datatable/datatables.min.css",
+        "../src/assets/vendor/datatable/Select-1.2.5/css/select.dataTables.min.css",
+        "../src/assets/css/custom.css",
+        "../src/assets/vendor/select2/css/select2.min.css",
+        "../src/assets/vendor/dataTable/Buttons-1.5.1/css/buttons.bootstrap4.min.css",
+        "../src/assets/vendor/daterangepicker/daterangepicker.css",
+        "../src/assets/vendor/pnotify/animate.min.css",
+        "../src/assets/vendor/pnotify/PNotifyBrightTheme.css",
+        "../src/assets/vendor/jquery-confirm/jquery-confirm.min.css"
+      ],
+      "scripts": [
+        "../src/assets/vendor/jquery/jquery.min.js",
+        "../src/assets/vendor/popper.js/umd/popper.min.js",
+        "../src/assets/vendor/bootstrap/js/bootstrap.min.js",
+        "../src/assets/js/grasp_mobile_progress_circle-1.0.0.min.js",
+        "../src/assets/vendor/jquery.cookie/jquery.cookie.js",
+        "../src/assets/vendor/chart.js/Chart.min.js",
+        "../src/assets/vendor/jquery-validation/jquery.validate.min.js",
+        "../src/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js",
+        "../src/assets/js/charts-home.js",
+        "../src/assets/vendor/datatable/datatables.min.js",
+        "../src/assets/vendor/datatable/Select-1.2.5/js/dataTables.select.min.js",
+        "../src/assets/vendor/select2/js/select2.full.min.js",
+        "../src/assets/vendor/datatable/Buttons-1.5.1/js/buttons.bootstrap4.min.js",
+        "../src/assets/vendor/daterangepicker/moment.min.js",
+        "../src/assets/vendor/daterangepicker/daterangepicker.js",
+        "../src/assets/vendor/pnotify/PNotify.js",
+        "../src/assets/vendor/pnotify/PNotifyAnimate.js",
+        "../src/assets/vendor/pnotify/PNotifyConfirm.js",
+        "../src/assets/vendor/jquery-confirm/jquery-confirm.min.js",
+        "../src/assets/vendor/datatable/Buttons-1.5.1/js/dataTables.buttons.min.js",
+        "../src/assets/vendor/datatable/Buttons-1.5.1/js/buttons.flash.min.js",
+        "../src/assets/vendor/datatable/Buttons-1.5.1/js/jszip.min.js",
+        "../src/assets/vendor/datatable/Buttons-1.5.1/js/pdfmake.min.js",
+        "../src/assets/vendor/datatable/Buttons-1.5.1/js/vfs_fonts.js",
+        "../src/assets/vendor/datatable/Buttons-1.5.1/js/buttons.html5.min.js",
+        "../src/assets/vendor/datatable/Buttons-1.5.1/js/buttons.print.min.js",
+        "../src/assets/vendor/datatable/Buttons-1.5.1/js/buttons.colVis.min.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

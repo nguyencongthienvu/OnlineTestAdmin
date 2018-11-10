@@ -1,0 +1,45 @@
+<!-- Side Navbar -->
+<nav class="side-navbar">
+  <div class="side-navbar-wrapper">
+    <!-- Sidebar Header    -->
+    <div class="sidenav-header d-flex align-items-center justify-content-center">
+      <!-- User Info-->
+      <div class="sidenav-header-inner text-center"><img src="" id="img_hinh" alt="person" class="img-fluid rounded-circle">
+        <h2 class="h5" id="name">Admin</h2>
+      </div>
+      <!-- Small Brand information, appears on minimized sidebar-->
+      <div class="sidenav-header-logo">
+        <a (click)="backhome()" class="brand-small text-center" style="text-decoration: none"> <strong class="text-primary">DT</strong><strong class="text-primary">M</strong></a>
+      </div>
+    </div>
+    <!-- Sidebar Navigation Menus-->
+    <div class="main-menu">
+      <h5 class="sidenav-heading">Main</h5>
+      <ul id="side-main-menu" class="side-menu list-unstyled">
+        <li (click)="backhome()"><a id="home"> <i class="icon-home"></i>Trang chủ</a></li>
+        <li><a href="#isc" aria-expanded="false" data-toggle="collapse"> Thông tin tài khoản</a>
+          <ul id="isc" class="collapse list-unstyled ">
+              <li><a routerLink="student"> <i class="fa fa-angle-double-right "></i>Sinh Viên</a></li>
+              <li><a routerLink="instructor"> <i class="fa fa-angle-double-right "></i>Giảng Viên</a></li>
+          </ul>
+        </li>
+        <li><a href="#thongtinhocvien" aria-expanded="false" data-toggle="collapse"> Thông tin Khoa</a>
+          <ul id="thongtinhocvien" class="collapse list-unstyled ">
+           <li><a routerLink="department" > <i class="fa fa-angle-double-right"></i>Khoa</a></li>
+          </ul>
+        </li>
+        <li><a href="#thongtinkhoahoc" aria-expanded="false" data-toggle="collapse"> Thông tin khóa học</a>
+          <ul id="thongtinkhoahoc" class="collapse list-unstyled ">
+           <li><a routerLink="course" > <i class="fa fa-angle-double-right"></i>Khóa</a></li>
+          </ul>
+        </li>
+        <li><a href="#timkiem" aria-expanded="false" data-toggle="collapse"> Tim Kiem</a>
+          <ul id="timkiem" class="collapse list-unstyled ">
+           <li><a routerLink="search" > <i class="fa fa-angle-double-right"></i>Tim Thong Tin Sinh Vien</a></li>
+          </ul>
+        </li>
+      </ul>   
+    </div>
+   
+  </div>
+</nav>
