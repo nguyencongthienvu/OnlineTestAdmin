@@ -28,4 +28,12 @@ export class AuthService {
     });
     return this.http.get(url, {headers: headers}).toPromise();
   }
+  Profile(token): Promise<any> {
+    let url: string = `${this.url.BASE_URL}/user`;
+    let headers: Headers = new Headers({
+      'Content-Type': 'application/json',
+      'Authorization': `${token}`
+    });
+    return this.http.get(url, {headers: headers}).toPromise();
+  }
 }
