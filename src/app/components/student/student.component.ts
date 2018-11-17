@@ -35,7 +35,8 @@ export class StudentComponent implements OnInit {
   onSubmit()
   {
     this.Student ={
-      "total":$('#username').val(),
+      "username":$('#username').val(),
+      "total":$('#total').val(),
       "password":"123",
       "role":"2",
       "active":$('#active').val(),
