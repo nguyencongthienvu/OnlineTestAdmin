@@ -53,7 +53,9 @@ export class SearchComponent implements OnInit {
         tbl.rows.add(this.student); // Add new data
         tbl.columns.adjust().draw(); // Redraw the DataTable
       }
-      else
+      else if(data.json().status === 'fail') {
+        this.logout();
+      } else
       {
         this.pnotify.error({
           text: "Không có dữ liệu yêu cầu lọc điều kiện khác !",

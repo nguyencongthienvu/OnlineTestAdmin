@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
       this.auth.ensureAuthenticated(token).then((user) => {
         if (user.json().status === 'connected') {
           this.users = user.json().data
+          sessionStorage.setItem("role", this.users.role)
         }
         else
         {

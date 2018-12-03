@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       }
       else
       {
-        if(data.data.active == 0 && data.data.role == 0)
+        if(data.data.active == 0 && data.data.role == 0 || data.data.active == 0 && data.data.role == 4)
         {
           localStorage.setItem('token', user.json().data.token);
           const token = localStorage.getItem('token');

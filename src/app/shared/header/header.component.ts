@@ -13,6 +13,7 @@ export class HeaderComponent  {
   logout() {
     localStorage.removeItem('token');
     localStorage.clear();
+    sessionStorage.clear();
   }
 
 }
