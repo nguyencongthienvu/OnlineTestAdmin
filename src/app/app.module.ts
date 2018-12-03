@@ -23,6 +23,7 @@ import { InstructorComponent } from './components/instructor/instructor.componen
 import { DepartmentComponent } from './components/department/department.component';
 import { CourseComponent } from './components/course/course.component';
 import { SearchComponent } from './components/search/search.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 @NgModule({
@@ -37,20 +38,23 @@ import { SearchComponent } from './components/search/search.component';
     InstructorComponent,
     DepartmentComponent,
     CourseComponent,
-    SearchComponent
+    SearchComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     RouterModule.forRoot([
+      { path: '', component:HomeComponent},
       { path: 'login', component: LoginComponent },
       {path: 'home',component:HomeComponent,children:[
         {path:'student',component:StudentComponent},
         {path:'instructor',component:InstructorComponent},
         {path:'department',component:DepartmentComponent},
         {path:'course',component:CourseComponent},
-        {path:'search',component:SearchComponent}
+        {path:'search',component:SearchComponent},
+        {path:'admin',component:AdminComponent}
       ]}
     ])
   ],

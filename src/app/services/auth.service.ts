@@ -7,12 +7,14 @@ import { UrlServiceService } from '../services/url-service.service'
 export class AuthService {
   private headers: Headers = new Headers({'Content-Type': 'application/json'});
   constructor(private http: Http,private url: UrlServiceService) {}
-  login(user:User): Promise<any> {
+  
+  public login(user:User): Promise<any> {
     console.log(user)
     let url: string = `${this.url.BASE_URL}/login`;
     return this.http.post(url, user, {headers: this.headers}).toPromise();
   }
-  ensureAuthenticated(token): Promise<any> {
+
+  public ensureAuthenticated(token): Promise<any> {
     let url: string = `${this.url.BASE_URL}/login/status`;
     let headers: Headers = new Headers({
       'Content-Type': 'application/json',
@@ -20,7 +22,8 @@ export class AuthService {
     });
     return this.http.get(url, {headers: headers}).toPromise();
   }
-  ensureAuthenticatedwhenlogin(token): Promise<any> {
+
+  public ensureAuthenticatedwhenlogin(token): Promise<any> {
     let url: string = `${this.url.BASE_URL}/status`;
     let headers: Headers = new Headers({
       'Content-Type': 'application/json',
@@ -28,7 +31,8 @@ export class AuthService {
     });
     return this.http.get(url, {headers: headers}).toPromise();
   }
-  Profile(token): Promise<any> {
+
+  public Profile(token): Promise<any> {
     let url: string = `${this.url.BASE_URL}/user`;
     let headers: Headers = new Headers({
       'Content-Type': 'application/json',
@@ -36,4 +40,33 @@ export class AuthService {
     });
     return this.http.get(url, {headers: headers}).toPromise();
   }
+
+  public getAllAdmin(token): Promise<any> {
+    let url: string =  `${this.url.BASE_URL}/admin`;
+    let headers: Headers = new Headers({
+      'Content-Type': 'application/json',
+      'Authorization': `${token}`
+    });
+    return this.http.get(url, {headers: headers}).toPromise();
+  }
+
+  public addAdmin(token, detail) {
+    let url : string = `${this.url.BASE_URL}/admin`;
+    let headers: Headers = new Headers({
+      'Content-Type': 'application/json',
+      'Authorization': `${token}`
+    });
+    return this.http.post(url, detail, {headers: headers}).toPromise();
+  }
+
+  public updateAdmin(token, rowId) {
+    let url : string = `${this.url.BASE_URL}/admin`;
+    let headers: Headers = new Headers({
+      'Content-Type': 'application/json',
+      'Authorization': `${token}`
+    });
+    const role = sessionStorage.getItem("role");
+    return this.http.put(url, {rowId, role}, {headers: headers}).toPromise();
+  }
+
 }
