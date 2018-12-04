@@ -103,10 +103,7 @@ export class AdminComponent implements OnInit {
   }
   }
 
-  ngOnInit() {
-    self=this;
-    // $('#department').select2();
-    $('.btn_add').click(function(){
+  public showModal() {
       $('#admin').modal("show");
       var Id = $('#hideId').val();
       if(Id==0)
@@ -116,7 +113,11 @@ export class AdminComponent implements OnInit {
         $('#active').val("");
         $('#role').val("");
       }
-    }) 
+  }
+  ngOnInit() {
+    self=this;
+    // $('#department').select2();
+
 
     //add vao datatable
     tbl = $("#dataTable").DataTable({
