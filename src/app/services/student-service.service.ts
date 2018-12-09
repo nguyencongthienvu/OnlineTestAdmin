@@ -61,4 +61,20 @@ export class StudentServiceService {
     });
     return this.http.post(url,data,{headers: headers}).toPromise();
   }
+  getAllDataByConditionMark(token) {
+    let url : string = `${this.url.BASE_URL}/search/searchByMark`;
+    let headers: Headers = new Headers({
+      'Content-Type': 'application/json',
+      'Authorization': `${token}`
+    });
+    return this.http.post(url,{},{headers: headers}).toPromise();
+  }
+  getAllDataByConditionMarks(Data, token) {
+    let url : string = `${this.url.BASE_URL}/search/searchByMark`;
+    let headers: Headers = new Headers({
+      'Content-Type': 'application/json',
+      'Authorization': `${token}`
+    });
+    return this.http.post(url,Data,{headers: headers}).toPromise();
+  }
 }

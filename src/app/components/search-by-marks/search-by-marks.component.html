@@ -1,0 +1,83 @@
+<div class="breadcrumb-holder">
+  <div class="container-fluid">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="home" (click)="backhome()">Trang Chủ</a></li>
+      <li class="breadcrumb-item active">Sinh Viên</li>
+    </ul>
+  </div>
+</div>
+
+<section>
+  <div class="container-fluid">
+    <!--page header -->
+    <header>
+      <h1 class="h3 display">Điểm Của Sinh Viên</h1>
+    </header>
+    <!-- Example DataTables Card-->
+    <div class="card mb-3">
+      <div class="card-header">
+        <button type="button" class="btn btn-primary text-light float-right btn_add">
+          Lọc
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover" id="dataTable" width="100%">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Tài Khoản</th>
+                <th>Tên Đầy Đủ</th>
+                <th>Khoa</th>
+                <th>Khóa</th>
+                <th>Điểm</th>
+                <th>Kiểm Ngày</th>
+                <th>Tình Trạng</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Modal add student-->
+<div class="modal fade" id="student" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Lọc Sinh Viên</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          
+        </div>
+        <div class="modal-body">
+          <form >
+            <div class="form-group">
+              <input type="hidden" id="hideId" value="0">
+            <label for="min"><strong>Điểm Từ</strong></label>
+              <input type="number" class="form-control" [(ngModel)]="min" name="min" id="min" min="0" max="10" required>
+          </div>
+          <div class="form-group">
+          <label for="max"><strong>Điểm Đến</strong></label>
+            <input type="number" class="form-control" [(ngModel)]="max" name="max" id="max" min="0" max="10" required>
+        </div>
+            <!-- <div class="form-group ">
+                <label for="course" ><strong>Khóa</strong></label>
+                <select name="course" class="form-control select2" [(ngModel)]="Student.course" id="course" required>
+                    <option *ngFor="let course of courseData" [value]=course.dcid>{{course.dcname}}</option>        
+                  </select>
+              </div> -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary"  (click)="onSubmit()" data-dismiss="modal">Lọc</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
+        </div>
+      </div>
+    </div>
+  </div> 

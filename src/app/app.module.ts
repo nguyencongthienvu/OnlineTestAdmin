@@ -24,6 +24,7 @@ import { DepartmentComponent } from './components/department/department.componen
 import { CourseComponent } from './components/course/course.component';
 import { SearchComponent } from './components/search/search.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { SearchByMarksComponent } from './components/search-by-marks/search-by-marks.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { AdminComponent } from './components/admin/admin.component';
     DepartmentComponent,
     CourseComponent,
     SearchComponent,
-    AdminComponent
+    AdminComponent,
+    SearchByMarksComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { AdminComponent } from './components/admin/admin.component';
         {path:'department',component:DepartmentComponent},
         {path:'course',component:CourseComponent},
         {path:'search',component:SearchComponent},
-        {path:'admin',component:AdminComponent}
+        {path:'admin',component:AdminComponent},
+        {path:'searchByMarks',component:SearchByMarksComponent}
       ]}
     ])
   ],
