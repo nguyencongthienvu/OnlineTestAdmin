@@ -16,7 +16,7 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header" *ngIf="role == 0">
-          <button type="button" class="btn btn-primary fa fa-plus text-light float-right btn_add">
+          <button type="button" (click)="showModal()" class="btn btn-primary fa fa-plus text-light float-right btn_add">
           </button>
         </div>
         <div class="card-body">
